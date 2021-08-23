@@ -1,5 +1,5 @@
 import time
-
+import os
 import bs4
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -33,6 +33,7 @@ while True:
 
     for url in in_stock:
         url = base_url + url
+        os.system("osascript -e 'display notification \"BestBuy has ps5 in stock!\"\'")
         print(url)
 
     time.sleep(8)
